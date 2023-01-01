@@ -373,6 +373,9 @@ class Tensor:
     def argmin(self, dim=None, keepdim=False):
         return torch_frontend.argmin(self._ivy_array, dim=dim, keepdim=keepdim)
 
+    def argsort(self, dim=-1, descending=False):
+        return torch_frontend.argsort(self._ivy_array, dim=dim, descending=descending)
+
     def ceil(self):
         return torch_frontend.ceil(self._ivy_array)
 
